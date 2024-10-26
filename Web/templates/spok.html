@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOK Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_spok.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Masukkan Kalimat SPOK</h1>
+        <form action="/spok" method="POST">
+            <input type="text" id="spokInput" name="sentence" placeholder="Masukkan kalimat SPOK di sini..." required>
+            <button type="submit">Kirim</button>
+        </form>
+        <div id="result">
+                <h2>Tagged Sentence:</h2>
+                <p>{{ tagged_sentence }}</p>
+        </div>
+    </div>
+</body>
+</html>
