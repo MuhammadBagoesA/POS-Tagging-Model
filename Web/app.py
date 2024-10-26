@@ -3,7 +3,7 @@ import pickle
 
 app = Flask(__name__)
 
-model = pickle.load(open("pos_tagger_model.pkl", "rb"))
+model = pickle.load(open("../Model/pos_tagger_model.pkl", "rb"))
 
 @app.route("/")
 def index():
